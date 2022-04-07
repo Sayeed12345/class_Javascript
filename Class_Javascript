@@ -1,0 +1,41 @@
+console.log("learn class in javascript");
+
+class Employee {
+  constructor (letName,letId,letDivision,letExperience) {
+    this.name = letName;
+    this.id = letId;
+    this.division = letDivision;
+    this.experience = letExperience;
+  }
+  slogan() {
+    return "I am ${this.name} and  I live in Pune";
+  }
+  joiningYear() {
+    return 2020-this.experience;
+  }
+  static add(a,b){
+    return a+b;
+  }
+}
+
+
+class Personal extends Employee {
+  constructor (letName,letId,letDivision,letExperience,letLanguage, letAge) {
+    super (letName,letId,letDivision,letExperience)
+    this.language = letLanguage;
+    this.age = letAge;
+  }
+  favoriteLang() {
+    if (letLanguage == "python") {
+      return "python";
+    } else {
+      return "javascript";
+    }
+  }
+  static multiply(a,b) {
+    return a*b;
+  }
+}
+
+rohan = new Personal("rohan",1,"abc",20,"js",25);
+console.log(rohan)
